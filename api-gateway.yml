@@ -27,25 +27,25 @@ spring:
         - id: user-service
           uri: lb://user-service
           predicates:
-            - Path=/users/**
+            - Path=/users/**, /users
 
         # --- FLIGHT SERVICE ---
         - id: flight-service
           uri: lb://flight-service
           predicates:
-            - Path=/flights/**
+            - Path=/flights/**, /flights
 
         # --- AIRLINE SERVICE ---
         - id: airline-service
           uri: lb://airline-service
           predicates:
-            - Path=/airlines/**
+            - Path=/airlines/**, /airlines
 
         # --- BOOKING SERVICE ---
         - id: booking-service
           uri: lb://booking-service
           predicates:
-            - Path=/bookings/**
+            - Path=/bookings/**, /bookings
 
         # --- NOTIFICATION SERVICE ---
         - id: notification-service
