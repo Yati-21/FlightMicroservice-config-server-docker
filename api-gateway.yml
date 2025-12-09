@@ -10,7 +10,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true # Enable this so Gateway can find services via Eureka
+          enabled: true 
           lower-case-service-id: true
       routes:
         - id: user-service
@@ -51,23 +51,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/ # Ensure this matches your registry URL
+      defaultZone: http://localhost:8761/eureka/ 
 
 jwt:
   secret: ${JWT_SECRET}
 
-
-#spring.application.name=api-gateway
-#server.port=8080
-
-#eureka.client.service-url.defaultZone=http://service-registry:8761/eureka/
-
-##spring.cloud.gateway.discovery.locator.enabled=false
-#spring.cloud.gateway.discovery.locator.enabled=true
-#spring.cloud.gateway.discovery.locator.lower-case-service-id=true
-
-
-#management.endpoints.web.exposure.include=*
-
-## security
-#jwt.secret=${JWT_SECRET}
